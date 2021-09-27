@@ -2,85 +2,47 @@
 
 " GUI color definitions
 let s:gui00        = "000000"
-let g:base16_gui00 = "000000"
 let s:gui01        = "282828"
-let g:base16_gui01 = "282828"
 let s:gui02        = "383838"
-let g:base16_gui02 = "383838"
 let s:gui03        = "888888"
-let g:base16_gui03 = "888888"
 let s:gui04        = "b8b8b8"
-let g:base16_gui04 = "b8b8b8"
 let s:gui05        = "d8d8d8"
-let g:base16_gui05 = "d8d8d8"
 let s:gui06        = "e8e8e8"
-let g:base16_gui06 = "e8e8e8"
 let s:gui07        = "f8f8f8"
-let g:base16_gui07 = "f8f8f8"
 let s:gui08        = "e65737"
-let g:base16_gui08 = "e65737"
 let s:gui09        = "dc9656"
-let g:base16_gui09 = "dc9656"
 let s:gui0A        = "f7ca88"
-let g:base16_gui0A = "f7ca88"
 let s:gui0B        = "a1b56c"
-let g:base16_gui0B = "a1b56c"
 let s:gui0C        = "86c1b9"
-let g:base16_gui0C = "86c1b9"
 let s:gui0D        = "7cafc2"
-let g:base16_gui0D = "7cafc2"
 let s:gui0E        = "ba8baf"
-let g:base16_gui0E = "ba8baf"
 let s:gui0F        = "a16946"
-let g:base16_gui0F = "a16946"
 
 " Terminal color definitions
 let s:cterm00        = "00"
-let g:base16_cterm00 = "00"
 let s:cterm03        = "08"
-let g:base16_cterm03 = "08"
 let s:cterm05        = "07"
-let g:base16_cterm05 = "07"
 let s:cterm07        = "15"
-let g:base16_cterm07 = "15"
 let s:cterm08        = "01"
-let g:base16_cterm08 = "01"
 let s:cterm0A        = "03"
-let g:base16_cterm0A = "03"
 let s:cterm0B        = "02"
-let g:base16_cterm0B = "02"
 let s:cterm0C        = "06"
-let g:base16_cterm0C = "06"
 let s:cterm0D        = "04"
-let g:base16_cterm0D = "04"
 let s:cterm0E        = "05"
-let g:base16_cterm0E = "05"
 if exists("base16colorspace") && base16colorspace == "256"
   let s:cterm01        = "18"
-  let g:base16_cterm01 = "18"
   let s:cterm02        = "19"
-  let g:base16_cterm02 = "19"
   let s:cterm04        = "20"
-  let g:base16_cterm04 = "20"
   let s:cterm06        = "21"
-  let g:base16_cterm06 = "21"
   let s:cterm09        = "16"
-  let g:base16_cterm09 = "16"
   let s:cterm0F        = "17"
-  let g:base16_cterm0F = "17"
 else
   let s:cterm01        = "10"
-  let g:base16_cterm01 = "10"
   let s:cterm02        = "11"
-  let g:base16_cterm02 = "11"
   let s:cterm04        = "12"
-  let g:base16_cterm04 = "12"
   let s:cterm06        = "13"
-  let g:base16_cterm06 = "13"
   let s:cterm09        = "09"
-  let g:base16_cterm09 = "09"
   let s:cterm0F        = "14"
-  let g:base16_cterm0F = "14"
 endif
 
 " Theme setup
@@ -158,6 +120,7 @@ call <sid>hi("TooLong",       s:gui08, "", s:cterm08, "", "", "")
 call <sid>hi("Underlined",    s:gui08, "", s:cterm08, "", "", "")
 call <sid>hi("Visual",        "", s:gui02, "", s:cterm02, "", "")
 call <sid>hi("VisualNOS",     s:gui08, "", s:cterm08, "", "", "")
+call <sid>hi("Warning",       s:gui00, s:gui09, s:cterm00, s:cterm09, "", "")
 call <sid>hi("WarningMsg",    s:gui08, "", s:cterm08, "", "", "")
 call <sid>hi("WildMenu",      s:gui00, s:gui05, s:cterm00, s:cterm05, "", "")
 call <sid>hi("Title",         s:gui0D, "", s:cterm0D, "", "none", "")
@@ -183,7 +146,7 @@ call <sid>hi("TabLineSel",    s:gui0B, s:gui01, s:cterm0B, s:cterm01, "none", ""
 
 " Standard syntax highlighting
 call <sid>hi("Boolean",      s:gui09, "", s:cterm09, "", "", "")
-call <sid>hi("Character",    s:gui08, "", s:cterm08, "", "", "")
+call <sid>hi("Character",    s:gui09, "", s:cterm09, "", "", "")
 call <sid>hi("Comment",      s:gui03, "", s:cterm03, "", "", "")
 call <sid>hi("Conditional",  s:gui0E, "", s:cterm0E, "", "", "")
 call <sid>hi("Constant",     s:gui09, "", s:cterm09, "", "", "")
@@ -191,7 +154,7 @@ call <sid>hi("Define",       s:gui0E, "", s:cterm0E, "", "none", "")
 call <sid>hi("Delimiter",    s:gui0F, "", s:cterm0F, "", "", "")
 call <sid>hi("Float",        s:gui09, "", s:cterm09, "", "", "")
 call <sid>hi("Function",     s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("Identifier",   s:gui08, "", s:cterm08, "", "none", "")
+call <sid>hi("Identifier",   s:gui0E, "", s:cterm0E, "", "none", "")
 call <sid>hi("Include",      s:gui0D, "", s:cterm0D, "", "", "")
 call <sid>hi("Keyword",      s:gui0E, "", s:cterm0E, "", "", "")
 call <sid>hi("Label",        s:gui0A, "", s:cterm0A, "", "", "")
@@ -252,87 +215,6 @@ call <sid>hi("csType",                  s:gui08, "", s:cterm08, "", "", "")
 call <sid>hi("csUnspecifiedStatement",  s:gui0D, "", s:cterm0D, "", "", "")
 call <sid>hi("csContextualStatement",   s:gui0E, "", s:cterm0E, "", "", "")
 call <sid>hi("csNewDecleration",        s:gui08, "", s:cterm08, "", "", "")
-
-" Clap highlighting
-hi default link ClapInput             ColorColumn
-hi default link ClapSpinner           ColorColumn
-hi default link ClapDisplay           Default
-hi default link ClapPreview           ColorColumn
-hi default link ClapCurrentSelection  CursorLine
-hi default link ClapNoMatchesFound    ErrorFloat
-
-" Coc highlighting
-hi default link CocErrorSign         ErrorSign
-hi default link CocWarningSign       WarningSign
-hi default link CocInfoSign          InfoSign
-hi default link CocHintSign          HintSign
-
-hi default link CocErrorFloat        ErrorFloat
-hi default link CocWarningFloat      WarningFloat
-hi default link CocInfoFloat         InfoFloat
-hi default link CocHintFloat         HintFloat
-
-hi default link CocErrorHighlight    ErrorHighlight
-hi default link CocWarningHighlight  WarningHighlight
-hi default link CocInfoHighlight     InfoHighlight
-hi default link CocHintHighlight     HintHighlight
-
-hi default link CocSem_angle             Keyword
-hi default link CocSem_annotation        Keyword
-hi default link CocSem_attribute         Type
-hi default link CocSem_bitwise           Keyword
-hi default link CocSem_boolean           Boolean
-hi default link CocSem_brace             Normal
-hi default link CocSem_bracket           Normal
-hi default link CocSem_builtinAttribute  Type
-hi default link CocSem_builtinType       Type
-hi default link CocSem_character         String
-hi default link CocSem_class             Structure
-hi default link CocSem_colon             Normal
-hi default link CocSem_comma             Normal
-hi default link CocSem_comment           Comment
-hi default link CocSem_comparison        Keyword
-hi default link CocSem_concept           Keyword
-hi default link CocSem_constParameter    Identifier
-hi default link CocSem_dependent         Keyword
-hi default link CocSem_dot               Keyword
-hi default link CocSem_enum              Structure
-hi default link CocSem_enumMember        Constant
-hi default link CocSem_escapeSequence    Type
-hi default link CocSem_event             Identifier
-hi default link CocSem_formatSpecifier   Type
-hi default link CocSem_function          Function
-hi default link CocSem_interface         Type
-hi default link CocSem_keyword           Keyword
-hi default link CocSem_label             Keyword
-hi default link CocSem_logical           Keyword
-hi default link CocSem_macro             Macro
-hi default link CocSem_method            Function
-hi default link CocSem_modifier          Keyword
-hi default link CocSem_namespace         Identifier
-hi default link CocSem_number            Number
-hi default link CocSem_operator          Operator
-hi default link CocSem_parameter         Identifier
-hi default link CocSem_parenthesis       Normal
-hi default link CocSem_property          Identifier
-hi default link CocSem_punctuation       Keyword
-hi default link CocSem_regexp            Type
-hi default link CocSem_selfKeyword       Constant
-hi default link CocSem_semicolon         Normal
-hi default link CocSem_string            String
-hi default link CocSem_struct            Structure
-hi default link CocSem_type              Type
-hi default link CocSem_typeAlias         Type
-hi default link CocSem_typeParameter     Type
-hi default link CocSem_unknown           Normal
-hi default link CocSem_variable          Identifier
-
-call <sid>hi("CocHighlightRead",   s:gui0B, s:gui01,  s:cterm0B, s:cterm01, "", "")
-call <sid>hi("CocHighlightText",   s:gui0A, s:gui01,  s:cterm0A, s:cterm01, "", "")
-call <sid>hi("CocHighlightWrite",  s:gui08, s:gui01,  s:cterm08, s:cterm01, "", "")
-call <sid>hi("CocListMode",        s:gui01, s:gui0B,  s:cterm01, s:cterm0B, "bold", "")
-call <sid>hi("CocListPath",        s:gui01, s:gui0B,  s:cterm01, s:cterm0B, "", "")
-call <sid>hi("CocSessionsName",    s:gui05, "", s:cterm05, "", "", "")
 
 " CSS highlighting
 call <sid>hi("cssBraces",      s:gui05, "", s:cterm05, "", "", "")
@@ -416,10 +298,6 @@ call <sid>hi("markdownError",             s:gui05, s:gui00, s:cterm05, s:cterm00
 call <sid>hi("markdownCodeBlock",         s:gui0B, "", s:cterm0B, "", "", "")
 call <sid>hi("markdownHeadingDelimiter",  s:gui0D, "", s:cterm0D, "", "", "")
 
-" NERDTree highlighting
-call <sid>hi("NERDTreeDirSlash",  s:gui0D, "", s:cterm0D, "", "", "")
-call <sid>hi("NERDTreeExecFile",  s:gui05, "", s:cterm05, "", "", "")
-
 " PHP highlighting
 call <sid>hi("phpMemberSelector",  s:gui05, "", s:cterm05, "", "", "")
 call <sid>hi("phpComparison",      s:gui05, "", s:cterm05, "", "", "")
@@ -451,18 +329,6 @@ call <sid>hi("sassMixinName",  s:gui0D, "", s:cterm0D, "", "", "")
 hi default link SignifySignAdd    GitAddSign
 hi default link SignifySignChange GitChangeSign
 hi default link SignifySignDelete GitDeleteSign
-
-" Startify highlighting
-call <sid>hi("StartifyBracket",  s:gui03, "", s:cterm03, "", "", "")
-call <sid>hi("StartifyFile",     s:gui07, "", s:cterm07, "", "", "")
-call <sid>hi("StartifyFooter",   s:gui03, "", s:cterm03, "", "", "")
-call <sid>hi("StartifyHeader",   s:gui0B, "", s:cterm0B, "", "", "")
-call <sid>hi("StartifyNumber",   s:gui09, "", s:cterm09, "", "", "")
-call <sid>hi("StartifyPath",     s:gui03, "", s:cterm03, "", "", "")
-call <sid>hi("StartifySection",  s:gui0E, "", s:cterm0E, "", "", "")
-call <sid>hi("StartifySelect",   s:gui0C, "", s:cterm0C, "", "", "")
-call <sid>hi("StartifySlash",    s:gui03, "", s:cterm03, "", "", "")
-call <sid>hi("StartifySpecial",  s:gui03, "", s:cterm03, "", "", "")
 
 " Treesitter-refactor highlighting
 if has("nvim")
